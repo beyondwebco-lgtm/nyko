@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LADO | Fine Artificial Jewelry — Minimal, Elegant & Waterproof</title>
+  <meta name="description" content="Shop LADO Fine Artificial Jewelry. Clean, minimal 18K anti-tarnish chains, delicate crystal necklaces, statement earrings, and curated rings. Cash on Delivery available.">
+  <link rel="icon" type="image/png" href="/lado-logo.png">
+  
+  <!-- Google Fonts: Jost (Used by prao.com) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <!-- Minimal Top Announcement Bar (Warm luxury sand with subtle gold shimmer) -->
+  <div class="prao-topbar" id="announcementBar">
+    <div class="container topbar-inner">
+      <button class="topbar-arrow prev" id="topbarPrev" aria-label="Previous announcement">‹</button>
+      <div class="topbar-ticker" id="announcementTicker">
+        <span class="ticker-text" id="announcementText">Cash On Delivery (COD) Available Across India ✨</span>
+      </div>
+      <button class="topbar-arrow next" id="topbarNext" aria-label="Next announcement">›</button>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (Clean Ivory White, Centered Logo, Minimal Icons) -->
+  <header class="prao-header" id="mainHeader">
+    <div class="container header-main-row">
+      <!-- Left: Mobile Menu & Search Icon -->
+      <div class="header-left">
+        <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <button class="icon-btn header-search-btn" id="openSearchBtn" aria-label="Search" title="Search (⌘K)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          
+        </button>
+      </div>
+
+      <!-- Center: LADO Brand Logo -->
+      <a href="/" class="header-center-logo">
+        <img src="/lado-logo.png" alt="LADO - Fine Artificial Jewelry" class="prao-logo-img">
+      </a>
+
+      <!-- Right: Wishlist & Bag Icon -->
+      <div class="header-right">
+        <button class="icon-btn" id="wishlistToggleBtn" aria-label="Wishlist" title="View Wishlist">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="badge-count" id="wishlistCount">0</span>
+        </button>
+
+        <button class="icon-btn cart-bag-btn" id="cartToggleBtn" aria-label="Shopping Bag" title="View Bag">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="badge-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Clean Horizontal Sub-Navigation (Just like prao.com) -->
+    <nav class="prao-subnav" id="navMenu">
+      <div class="container">
+        <ul class="subnav-list">
+          <li><a href="#catalog" class="subnav-link active" data-category="all">New Arrivals ✨</a></li>
+          <li><a href="#catalog" class="subnav-link" data-category="necklaces">Necklaces</a></li>
+          <li><a href="#catalog" class="subnav-link" data-category="earrings">Earrings</a></li>
+          <li><a href="#catalog" class="subnav-link" data-category="rings">Rings</a></li>
+          <li><a href="#catalog" class="subnav-link" data-category="bracelets">Bracelets</a></li>
+          <li><a href="#catalog" class="subnav-link" data-category="anti-tarnish">Anti-Tarnish (Waterproof)</a></li>
+          <li><a href="#catalog" class="subnav-link" data-category="under499">Minimalist Designs</a></li>
+          <li><a href="#complete-look" class="subnav-link">Best Sellers ✨</a></li>
+          <li><a href="#complete-look" class="subnav-link">Combos & Sets</a></li>
+          <li><a href="#reviews-section" class="subnav-link">Reviews</a></li>
+          <li><a href="#footer" class="subnav-link">About Us</a></li>
+          <li><a href="#footer" class="subnav-link">Track Order</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Minimalist Hero Banner (PRAO Style: Clean Editorial Split Photography) -->
+    <section class="prao-hero">
+      <a href="#catalog" class="prao-hero-link" aria-label="Shop New Arrivals">
+        <img src="/images/hero-banner.jpg" alt="LADO Fine Artificial Jewelry Editorial Collection" class="prao-hero-img">
+        <div class="prao-hero-overlay-bar">
+          <div class="prao-hero-cta">
+            <span>EXPLORE THE COLLECTION</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- Minimal Category Circles (Just like prao.com) -->
+    <section class="prao-categories-section">
+      <div class="container">
+        <div class="prao-cat-grid">
+          <div class="cat-pill" data-category="necklaces">
+            <div class="cat-thumb-wrap">
+              <img src="/images/solitaire-necklace.jpg" alt="Necklaces">
+            </div>
+            <span class="cat-title">Necklaces</span>
+          </div>
+
+          <div class="cat-pill" data-category="anti-tarnish">
+            <div class="cat-thumb-wrap highlight">
+              <img src="/images/anti-tarnish.jpg" alt="Anti-Tarnish Waterproof">
+            </div>
+            <span class="cat-title">Anti-Tarnish</span>
+          </div>
+
+          <div class="cat-pill" data-category="earrings">
+            <div class="cat-thumb-wrap">
+              <img src="/images/chandbali-earrings.jpg" alt="Earrings">
+            </div>
+            <span class="cat-title">Earrings</span>
+          </div>
+
+          <div class="cat-pill" data-category="rings">
+            <div class="cat-thumb-wrap">
+              <img src="/images/diamond-ring.jpg" alt="Rings">
+            </div>
+            <span class="cat-title">Rings</span>
+          </div>
+
+          <div class="cat-pill" data-category="bracelets">
+            <div class="cat-thumb-wrap">
+              <img src="/images/tennis-bracelet.jpg" alt="Bracelets">
+            </div>
+            <span class="cat-title">Bracelets</span>
+          </div>
+
+          <div class="cat-pill" data-category="festive">
+            <div class="cat-thumb-wrap">
+              <img src="/images/kundan-hasli.jpg" alt="Bridal Sets">
+            </div>
+            <span class="cat-title">Bridal Sets</span>
+          </div>
+
+          <div class="cat-pill" data-category="under499">
+            <div class="cat-thumb-wrap">
+              <img src="/images/emerald-choker.jpg" alt="Under ₹499">
+            </div>
+            <span class="cat-title">Under ₹499</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section class="catalog-section" id="catalog">
+      <div class="container">
+        <!-- Catalog Header Bar -->
+        <div class="catalog-header-bar">
+          <div>
+            <h2 class="prao-section-heading" id="catalogTitle">Best Sellers ✨</h2>
+            <p class="prao-section-sub">Fine artificial jewelry crafted for everyday elegance and festive glamour</p>
+          </div>
+          <!-- Sort & Filter Dropdown -->
+          <div class="catalog-controls">
+            <div class="filter-search-box">
+              <input type="text" id="catalogSearchInput" placeholder="Filter jewelry...">
+            </div>
+            <div class="select-wrap">
+              <select id="catalogSort">
+                <option value="featured">Featured Picks</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="catalog-tabs">
+          <button class="tab-btn active" data-filter="all">All Products</button>
+          <button class="tab-btn" data-filter="anti-tarnish">Anti-Tarnish 💧</button>
+          <button class="tab-btn" data-filter="necklaces">Necklaces</button>
+          <button class="tab-btn" data-filter="earrings">Earrings</button>
+          <button class="tab-btn" data-filter="rings">Rings</button>
+          <button class="tab-btn" data-filter="bracelets">Bracelets</button>
+          <button class="tab-btn" data-filter="under499">Under ₹499</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete Your Look Bundle Section (FoxKit style on PRAO) -->
+    <section class="bundle-section" id="complete-look">
+      <div class="container">
+        <div class="bundle-card">
+          <div class="bundle-header">
+            <span class="bundle-tag">✨ Complete Your Look</span>
+            <h3 class="bundle-title">Pair & Save an Extra 15%</h3>
+            <p class="bundle-subtitle">Special curated duo: Emerald Choker + Matching Pearl Chandbalis</p>
+          </div>
+
+          <div class="bundle-body">
+            <!-- Item 1 -->
+            <div class="bundle-product-row">
+              <label class="bundle-checkbox-wrap">
+                <input type="checkbox" id="bundleItem1" checked data-price="1899">
+                <span class="custom-checkbox"></span>
+              </label>
+              <img src="/images/emerald-choker.jpg" alt="Emerald Choker" class="bundle-thumb">
+              <div class="bundle-info">
+                <h4>Royal Emerald & Diamond Choker Necklace Set</h4>
+                <div class="bundle-pricing">
+                  <span class="price-current">₹1,899</span>
+                  <span class="price-orig">₹4,299</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bundle-plus-icon">+</div>
+
+            <!-- Item 2 -->
+            <div class="bundle-product-row">
+              <label class="bundle-checkbox-wrap">
+                <input type="checkbox" id="bundleItem2" checked data-price="899">
+                <span class="custom-checkbox"></span>
+              </label>
+              <img src="/images/chandbali-earrings.jpg" alt="Pearl Chandbalis" class="bundle-thumb">
+              <div class="bundle-info">
+                <h4>Noor Royal Pearl & Diamond Chandbalis</h4>
+                <div class="bundle-pricing">
+                  <span class="price-current">₹899</span>
+                  <span class="price-orig">₹1,999</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Box -->
+            <div class="bundle-action-box">
+              <div class="bundle-totals">
+                <span class="bundle-total-label">Bundle Price:</span>
+                <span class="bundle-total-crossed" id="bundleOrigTotal">₹2,798</span>
+                <span class="bundle-total-final" id="bundleFinalTotal">₹2,378</span>
+                <span class="bundle-savings" id="bundleSavingsTag">You Save ₹420 (15% Off)</span>
+              </div>
+              <button class="btn btn-dark btn-block" id="addBundleBtn">
+                ADD BUNDLE TO BAG
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anti-Tarnish Quality Guarantee (Clean Minimal Grid) -->
+    <section class="minimal-trust-section">
+      <div class="container">
+        <div class="trust-four-grid">
+          <div class="trust-card">
+            <div class="trust-icon">💧</div>
+            <h4>Waterproof & Sweatproof</h4>
+            <p>18K PVD gold coating designed for everyday gym, shower, and swim wear.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">🛡️</div>
+            <h4>Anti-Tarnish Guaranteed</h4>
+            <p>Zero green skin discoloration. Backed by our 6-month quality guarantee.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">🚚</div>
+            <h4>Fast Delivery Across India</h4>
+            <p>Free express delivery on orders over ₹499. Dispatched in 24 hours.</p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-icon">📦</div>
+            <h4>Cash On Delivery</h4>
+            <p>Pay easily at your doorstep or save an extra 10% on prepaid orders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Customer Reviews Section -->
+    <section class="reviews-section" id="reviews-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="prao-section-heading">What Our Customers Say</h2>
+          <div class="rating-summary">
+            <div class="stars">★★★★★</div>
+            <span><strong>4.9 out of 5</strong> based on 3,800+ customer reviews</span>
+          </div>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Minimal Footer (Just like prao.com) -->
+  <footer class="prao-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <img src="/lado-logo.png" alt="LADO" class="footer-logo">
+          <p class="footer-bio">
+            LADO is India’s finest collection of fashion and artificial jewellery. From anti-tarnish daily essentials to bridal chokers, we have something to make you dazzle.
+          </p>
+          <div class="social-media-links">
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Collections</h4>
+          <ul class="footer-list">
+            <li><a href="#catalog" data-category="necklaces">Necklaces</a></li>
+            <li><a href="#catalog" data-category="earrings">Earrings</a></li>
+            <li><a href="#catalog" data-category="rings">Rings</a></li>
+            <li><a href="#catalog" data-category="bracelets">Bracelets</a></li>
+            <li><a href="#catalog" data-category="anti-tarnish">Anti-Tarnish Jewellery</a></li>
+            <li><a href="#catalog" data-category="under499">Steals Under ₹499</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-list">
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Refund Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Jewelry Care Guide</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="footer-newsletter-text">Subscribe to receive exclusive drops, secret sales, and 10% off your first order.</p>
+          <form class="footer-newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required id="newsletterEmail">
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+          <div class="payment-icons-row">
+            <span>UPI</span>
+            <span>GPay</span>
+            <span>PhonePe</span>
+            <span>Cards</span>
+            <span>COD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 LADO Fashion Jewellery. All Rights Reserved. Reference: prao.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Cart Drawer (Enhanced for Client Demo) -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <h3>Shopping Bag</h3>
+        <span class="drawer-item-count" id="drawerCountText">(0 items)</span>
+      </div>
+      <button class="drawer-close-btn" id="closeCartBtn" aria-label="Close Bag">✕</button>
+    </div>
+
+    <!-- Free Shipping Progress Bar -->
+    <div class="shipping-progress-box">
+      <p class="shipping-status-text" id="shippingStatusText">
+        Add <strong>₹499</strong> more for <strong>FREE EXPRESS DELIVERY</strong>!
+      </p>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="shippingProgressFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Estimated Delivery Notice -->
+    <div class="cart-delivery-notice">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+      <span>Estimated Delivery: <strong>2 - 3 Days</strong> to Mumbai</span>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Injected dynamically -->
+    </div>
+
+    <!-- Gift Packaging Add-on Checkbox (Luxury Addon for Client Demo) -->
+    <div class="cart-gift-addon-box">
+      <label class="gift-addon-label">
+        <input type="checkbox" id="giftWrapCheckbox">
+        <span class="gift-icon">🎁</span>
+        <div class="gift-text">
+          <strong>Add Signature Velvet Gift Box & Ribbon (+₹49)</strong>
+          <small>Includes personalized royal calligraphy message card</small>
+        </div>
+      </label>
+    </div>
+
+    <!-- Cart Footer & Checkout Box -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <!-- Coupon Section with Clickable Suggestion Chips -->
+      <div class="coupon-section">
+        <div class="coupon-input-wrap">
+          <input type="text" id="couponCodeInput" placeholder="Discount code (e.g. LADO10)">
+          <button type="button" id="applyCouponBtn">APPLY</button>
+        </div>
+        <div class="coupon-chips-row">
+          <span class="coupon-chip" data-coupon="LADO10">🏷️ LADO10 (10% OFF)</span>
+          <span class="coupon-chip" data-coupon="WELCOME200">🏷️ WELCOME200 (₹200 OFF)</span>
+          <span class="coupon-chip" data-coupon="FESTIVE15">🏷️ FESTIVE15 (15% OFF)</span>
+        </div>
+        <div class="coupon-msg" id="couponMessage"></div>
+      </div>
+
+      <!-- Savings Banner for Client Demo -->
+      <div class="cart-savings-banner" id="cartSavingsBanner" style="display:none;"></div>
+
+      <!-- Live Price Calculation -->
+      <div class="cart-summary-lines">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="drawerSubtotal">₹0</span>
+        </div>
+        <div class="summary-line text-success" id="drawerDiscountRow" style="display:none;">
+          <span id="drawerDiscountLabel">Discount</span>
+          <span id="drawerDiscount">-₹0</span>
+        </div>
+        <div class="summary-line text-gift" id="drawerGiftRow" style="display:none;">
+          <span>Velvet Gift Box</span>
+          <span>+₹49</span>
+        </div>
+        <div class="summary-line">
+          <span>Shipping</span>
+          <span id="drawerShipping">FREE</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Estimated Total</span>
+          <span id="drawerGrandTotal">₹0</span>
+        </div>
+      </div>
+
+      <button class="btn btn-dark btn-block checkout-btn" id="startCheckoutBtn">
+        PROCEED TO CHECKOUT
+      </button>
+
+      <div class="cart-trust-badges">
+        <span>🔒 256-bit Secure</span>
+        <span>•</span>
+        <span>🛡️ 6-Month Guarantee</span>
+        <span>•</span>
+        <span>💵 COD Available</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-overlay" id="quickViewOverlay">
+    <div class="modal-container quick-view-modal" id="quickViewModal">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close modal">✕</button>
+      <div class="quick-view-grid" id="quickViewContent">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="searchModalOverlay">
+    <div class="modal-container search-modal">
+      <div class="search-modal-header">
+        <div class="search-input-field-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="liveSearchInput" placeholder="Search necklaces, chains, rings, chandbalis..." autofocus>
+        </div>
+        <button class="modal-close-btn" id="closeSearchModalBtn">✕</button>
+      </div>
+
+      <div class="quick-tags-wrap">
+        <span>Popular:</span>
+        <button class="quick-search-tag" data-tag="anti-tarnish">Anti-Tarnish Chain</button>
+        <button class="quick-search-tag" data-tag="emerald">Emerald Choker</button>
+        <button class="quick-search-tag" data-tag="solitaire">Solitaire Pendant</button>
+        <button class="quick-search-tag" data-tag="ring">Rings</button>
+      </div>
+
+      <div class="search-results-list" id="searchResultsList">
+        <p class="search-empty-hint">Type above to see matching jewelry</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Professional Client-Demo Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModalOverlay">
+    <div class="modal-container checkout-modal">
+      <button class="modal-close-btn" id="closeCheckoutBtn">✕</button>
+      
+      <!-- Checkout Form Content -->
+      <div class="checkout-modal-content" id="checkoutMainContent">
+        <div class="checkout-header-bar">
+          <img src="/lado-logo.png" alt="LADO" class="checkout-brand-logo">
+          <div class="checkout-secure-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span>Fast & Secure Checkout</span>
+          </div>
+        </div>
+
+        <div class="checkout-split-layout">
+          <!-- Left: Information Form -->
+          <form id="checkoutForm" class="checkout-form-col">
+            <h4 class="checkout-subheading">1. Delivery Address</h4>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" required placeholder="Name" value="Dr. Ananya Sharma" id="customerName">
+              </div>
+              <div class="form-group">
+                <label>Mobile Number (For Delivery SMS) *</label>
+                <input type="tel" required placeholder="+91 98765 43210" value="+91 98765 43210" id="customerPhone">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Street Address / Flat / Floor *</label>
+              <input type="text" required placeholder="House No, Building, Landmark" value="Flat 402, Royal Palms, Bandra West" id="customerAddress">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>City *</label>
+                <input type="text" required placeholder="City" value="Mumbai" id="customerCity">
+              </div>
+              <div class="form-group">
+                <label>Pincode *</label>
+                <input type="text" required placeholder="400050" value="400050" id="customerPincode">
+              </div>
+            </div>
+
+            <h4 class="checkout-subheading" style="margin-top: 18px;">2. Payment Method</h4>
+            
+            <div class="payment-method-selector">
+              <label class="pay-method-option active">
+                <input type="radio" name="payMethod" value="prepaid" checked>
+                <div class="pay-details">
+                  <div class="pay-title-row">
+                    <strong>UPI / Fast Checkout (Google Pay, PhonePe, Paytm)</strong>
+                    <span class="pay-savings-badge">EXTRA 10% OFF</span>
+                  </div>
+                  <small>Instant bank authorization • Dispatched on priority</small>
+                </div>
+              </label>
+
+              <label class="pay-method-option">
+                <input type="radio" name="payMethod" value="card">
+                <div class="pay-details">
+                  <div class="pay-title-row">
+                    <strong>Credit / Debit Card (Visa, Mastercard, RuPay)</strong>
+                  </div>
+                  <small>Zero surcharge • 256-Bit SSL Encrypted</small>
+                </div>
+              </label>
+
+              <label class="pay-method-option">
+                <input type="radio" name="payMethod" value="cod">
+                <div class="pay-details">
+                  <div class="pay-title-row">
+                    <strong>Cash on Delivery (COD)</strong>
+                  </div>
+                  <small>Pay cash upon doorstep delivery (+₹49 handling)</small>
+                </div>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-block checkout-submit-btn" id="confirmOrderBtn">
+              <span id="checkoutBtnLabel">PLACE ORDER • <span id="checkoutBtnPrice">₹0</span></span>
+            </button>
+          </form>
+
+          <!-- Right: Mini Order Summary -->
+          <div class="checkout-summary-col">
+            <h4 class="checkout-subheading">Order Summary</h4>
+            <div class="checkout-mini-items-list" id="checkoutMiniItems">
+              <!-- Dynamically populated -->
+            </div>
+            
+            <div class="checkout-breakdown-lines">
+              <div class="chk-line">
+                <span>Items Subtotal:</span>
+                <span id="chkSubtotal">₹0</span>
+              </div>
+              <div class="chk-line text-success" id="chkDiscountRow" style="display:none;">
+                <span id="chkDiscountTitle">Coupon Discount:</span>
+                <span id="chkDiscount">-₹0</span>
+              </div>
+              <div class="chk-line text-gift" id="chkGiftRow" style="display:none;">
+                <span>Velvet Box Packaging:</span>
+                <span>+₹49</span>
+              </div>
+              <div class="chk-line">
+                <span>Express Shipping:</span>
+                <span id="chkShipping">FREE</span>
+              </div>
+              <div class="chk-line total-highlight">
+                <span>Total Amount:</span>
+                <strong id="chkGrandTotal">₹0</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Celebratory Order Success View (Client Demo Feature) -->
+      <div class="order-success-view" id="orderSuccessView" style="display:none;">
+        <div class="success-checkmark">✓</div>
+        <h3 class="success-title">Order Successfully Placed!</h3>
+        <p class="success-subtitle">Thank you, <span id="successCustomerName">Ananya</span>! Your order has been confirmed.</p>
+        
+        <div class="order-id-badge">
+          <span>Order Confirmation ID:</span>
+          <strong id="generatedOrderId">#LADO-8942</strong>
+        </div>
+
+        <!-- Tracking Timeline -->
+        <div class="order-timeline-tracker">
+          <div class="timeline-step done">
+            <div class="step-dot"></div>
+            <span>Order Placed</span>
+          </div>
+          <div class="timeline-line active"></div>
+          <div class="timeline-step active">
+            <div class="step-dot"></div>
+            <span>Packing in Signature Velvet Box</span>
+          </div>
+          <div class="timeline-line"></div>
+          <div class="timeline-step">
+            <div class="step-dot"></div>
+            <span>Dispatched via Express Air</span>
+          </div>
+        </div>
+
+        <!-- Notification Message -->
+        <div class="success-notification-card">
+          <p>📲 <strong>SMS & WhatsApp Tracking Link Sent</strong> to <span id="successCustomerPhone">+91 98765 43210</span>.</p>
+          <small>Estimated Delivery: 2-3 business days. Hand-inspected with 6-month anti-tarnish guarantee certificate.</small>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="success-action-buttons">
+          <button class="btn btn-dark" id="continueShoppingBtn">CONTINUE SHOPPING</button>
+          <button class="btn btn-outline" id="printReceiptBtn">PRINT RECEIPT 🖨️</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
